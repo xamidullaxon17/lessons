@@ -1,0 +1,122 @@
+Created on Wed Nov  8 16:16:57 2023
+
+// - Bo'lish va butun qismini olish:
+5//6 = 0
+
+*******************************************************************************
+** - Exponenta(daraja/ildiz):
+5**2 = 25
+
+*******************************************************************************
+% - Bo'linmaning qoldig'ini olish:
+15%6 = 3
+if 15 % 2: ## agar sonni 2ga bolganda qoldiq qolsa bu toq son boladi
+    bu toq son bo'ladi
+if 10%2 == 0:  
+  bu juft son bo'ladi
+  
+*******************************************************************************
+Ildiz ostini topish:
+float(9)**(0.5) = 3
+
+*******************************************************************************
+int() -   butun son
+float() - o'nlik son
+str() -   sonlarni matn ko'rinishiga o'zgartiradi
+sqrt() -        kvadrat ildiz qaytaradi.
+pow(x,y) -      x ning y-darajasini qaytaradi.
+pi -            pi ning qiymatini saqlovchi o'zgaruvchi.
+log2(x) -       x ning 2 lik logorifmini qaytaruvchi funksiya.
+ceil(x) -       x dan katta yoki teng bo'lgan eng kichik butun sonni qaytaradi
+fabs(x) -       x ning absolyut qiymatini qaytaradi
+floor(x) -      x dan kichik yoki teng bo'lgan eng yaqin butun sonni qaytaradi
+exp(x) -        x**e ni qaytaruvchi funksiya
+cos(x) -        cos(x)ni qaytaruvchi funksiya
+sin(x) -        sin(x)ni qaytaruvchi funksiya
+tan(x) -        tan(x)ni qaytaruvchi funksiya
+degrees(x) -    x burchakning radian qiymatini darajaga konvertasiya qilish
+radians(x) -    x burchakning daraja qiymatini radianga konvertasiya qilish 
+e -             Matematik konstanta e (2.71828...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
