@@ -811,6 +811,115 @@ def bahola(ismlar):
 
 
 
+# from random import randint as r , choice as ch, shuffle  as sh
+# son = r(3, 300)
+# print(son)
+
+# matn = ['alisher','vali','xamid','behzod']
+# tanla = ch(matn)
+# print(tanla)
+# print(ch(tanla))
+
+# rand = list(range(1,10))
+# print(rand)
+# sh(rand)
+# print(rand)
+
+# def son_top(a):
+#     return a**2
+
+# from math import sqrt
+# sonlar = list(range(11)) # 0 dan 10 gacha sonlar ro'yxati
+# ildizlar = list(map(sqrt,sonlar))
+
+# son = lambda a: a**2
+# print(son(5))
+
+# import random as r 
+# sonlar = r.sample(range(100),10)
+# juft_sonlar = list(filter(lambda son: son%2==0,sonlar))
+# print(juft_sonlar)
+
+# mevalar = ['olma','anor','anjir','shaftoli',"o'rik","tarvuz","qovun","banan"]
+
+# mevalar_b = list(filter(lambda meva:meva.startswith('b'),mevalar))
+# print(mevalar_b)
+
+# f1 = lambda x: x * 10
+# print(f1(10))
+
+# f2 = lambda x, y: x * y
+# print(f2(5, 4))
+
+
+
+# from math import sqrt ,pi# *****************************
+# # def nom(argument):
+# #     return ifoda
+# # lambda argument: ifoda
+
+# uzunlik = lambda pi,r: 2*pi*r
+# print(uzunlik(pi,10))
+
+# kvadrat = lambda x,y:x**y
+# print(kvadrat(3,4))
+
+
+# def daraja(n):
+#     return lambda x : x**n
+# kvadrat = daraja(2)
+# kub = daraja(3)
+# print(f"3 ning kvadrati {kvadrat(3)}, kubi esa {kub(3)} ga teng")
+
+# # map()  royxatlarni qulay usulda yozish for ning orniga ishlatiladi
+# sonlar = list(range(11))
+# ildizlar = list(map(sqrt,sonlar))
+# print(ildizlar)
+
+# def daraja2(x):
+#     return x*x
+# print(list(map(daraja2,sonlar)))
+# # yoki
+# kvadratlar = list(map(lambda x: x*x,sonlar)) 
+# print(kvadratlar)
+
+# a = [4,5,6] 
+# b = [7,8,9]
+# qoshish = list(map(lambda x,y:x+y, a,b))
+# print(qoshish)
+
+
+# # filter()      if else orniga yoki saralash deyiladi    yoki faqat True qiymatlarni qaytadami map bolsa barcha qiymatlarni qaytarar edi
+# import random as r
+# sonlar = r.sample(range(100),10)
+# print(sonlar)
+# def juftmi(x):
+#     return x%2==0
+# juft_sonlar = list(filter(juftmi,sonlar))
+
+# juft_son = list(filter(lambda son: son%2==0, sonlar))
+# print(juft_son)
+
+
+# mevalar = ['olma','anor','anjir','shaftoli',"o'rik","tarvuz","qovun","banan"]
+# harf = 'b'
+# mevalar_b = list(filter(lambda meva: meva.startswith(harf),mevalar))
+# print(mevalar_b)
+
+# mevalar2 = list(filter(lambda meva: len(meva)<=5,mevalar))
+# print(mevalar2)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
