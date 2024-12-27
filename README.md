@@ -75,11 +75,9 @@
 ## Part 5: Sudo komandasi ishlatilishi
 
 1. **Part 2 da yaratilgan foydalanuvchi orqali OS hostname o'zgartirildi.**
-    - 
       ```sh
       sudo usermod -aG sudo user_1
       ```
-    - Komanda:
       ```sh
       sudo hostnamectl set-hostname xamid
       ```
