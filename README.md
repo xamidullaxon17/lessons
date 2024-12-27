@@ -1,4 +1,4 @@
-# Hisobot
+# DO1_Linux
 
 ## Part 1: OS o'rnatish
 
@@ -107,3 +107,4 @@
     - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
 
 
+## Part 6: 
