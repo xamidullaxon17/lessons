@@ -81,7 +81,9 @@
       ```sh
       sudo hostnamectl set-hostname xamid
       ```
-    - hostnamectl 
+      ```sh
+      hostnamectl
+      ```
     - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
 
 
