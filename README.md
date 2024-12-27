@@ -77,11 +77,7 @@
 1. **Part 2 da yaratilgan foydalanuvchi orqali OS hostname o'zgartirildi.**
       ```sh
       sudo usermod -aG sudo user_1
-      ```
-      ```sh
       sudo hostnamectl set-hostname xamid
-      ```
-      ```sh
       hostnamectl
       ```
     - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
