@@ -6,7 +6,8 @@
     ```sh
     cat /etc/issue
     ```
-    - Skrinshot: ![Part 1](part_1.png)
+    - Skrinshot: 
+    ![Part 1](part_1.png)
 
 
 ## Part 2: Foydalanuvchi yaratish
@@ -16,13 +17,15 @@
     sudo adduser user_1
     sudo usermod -aG adm user_1
     ```
-    - Skrinshot: ![adm ga qo'shildi](part_2.1.png)
+    - Skrinshot: 
+    ![adm ga qo'shildi](part_2.1.png)
 
 2. **Yangi foydalanuvchi `cat /etc/passwd` komandasining natijasida ko'rsatilgan.**
     ```sh
     cat /etc/passwd
     ```
-    - Skrinshot: ![Natija](part_2.png)
+    - Skrinshot: 
+    ![Natija](part_2.png)
 
 
 ## Part 3: Tarmoq sozlamalarini o'rnatish
@@ -31,19 +34,22 @@
     ```sh
     sudo hostnamectl set-hostname user_1
     ```
-    - Skrinshot: ![Mashina nomi o'zgartirildi](part_3.1.png)
+    - Skrinshot: 
+    ![Mashina nomi o'zgartirildi](part_3.1.png)
 
 2. **Vaqt zonasi joriy joylashuvingizga mos ravishda sozlandi.**
     ```sh
     sudo timedatectl set-timezone Asia/Tashkent
     ```
-    - Skrinshot: ![Vaqt zonasi sozlash](part_3.2.png)
+    - Skrinshot: 
+    ![Vaqt zonasi sozlash](part_3.2.png)
 
 3. **Tarmoq interfeyslari nomlari konsol komandasidan chiqarildi.**
     ```sh
     ip link
     ```
-    - Skrinshot: ![Tarmoq interfeyslari nomlari](part_3.3.png)
+    - Skrinshot: 
+    ![Tarmoq interfeyslari nomlari](part_3.3.png)
 
 4. **`lo` interfeysining mavjudligi tushuntirildi.**
 
@@ -53,7 +59,8 @@
     ```sh
     ip addr
     ```
-    - Skrinshot: ![DHCP serverdan ip manzili](part_3.5.png)
+    - Skrinshot: 
+    ![DHCP serverdan ip manzili](part_3.5.png)
 
 6. **DHCP dekodlandi.**
 
@@ -64,21 +71,24 @@
     ip route
     curl ifconfig.me
     ```
-    - Skrinshot: ![Shlyuz ip manzillari](part_3.6.png)
+    - Skrinshot: 
+    ![Shlyuz ip manzillari](part_3.6.png)
 
 8. **Statik (DHCP serverdan olinmagan) ip, gw, dns sozlamalari o'rnatildi.**
     ```sh
     sudo nano /etc/netplan/01-netcfg.yaml
     sudo netplan apply
     ```
-    - Skrinshot: ![Statik tarmoq sozlamalari](part_3.7.png)
+    - Skrinshot: 
+    ![Statik tarmoq sozlamalari](part_3.7.png)
 
 9. **1.1.1.1 va ya.ru masofaviy hostlari muvaffaqiyatli ping qilindi va komanda natijasi hisobotga qo'shildi. Komanda natijasida "0% packet loss" iborasi ko'rsatilgan.**
     ```sh
     ping -c 4 1.1.1.1
     ping -c 4 ya.ru
     ```
-    - Skrinshot: ![Ping natijasi](part_3.8.png)
+    - Skrinshot: 
+    ![Ping natijasi](part_3.8.png)
 
 
 ## Part 4: OS yangilash
@@ -91,7 +101,8 @@
     sudo apt autoremove -y
     sudo apt update
     ```
-    - Skrinshot: ![sudo apt update && sudo apt upgrade -y](part_4.png)
+    - Skrinshot: 
+    ![sudo apt update && sudo apt upgrade -y](part_4.png)
   
 
 ## Part 5: Sudo komandasi ishlatilishi
@@ -102,7 +113,8 @@
     sudo hostnamectl set-hostname xamid
     hostnamectl
     ```
-    - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
+    - Skrinshot: 
+    ![Hostname o'zgartirilgan](part_5.png)
 
 
 ## Part 6: Vaqt xizmatini o'rnatish va sozlash
@@ -123,13 +135,15 @@
     sudo timedatectl set-timezone Asia/Tashkent
     timedatectl
     ```
-    - Skrinshot: ![Vaqt zonasi vaqti](part_6.png)
+    - Skrinshot: 
+    ![Vaqt zonasi vaqti](part_6.png)
 
 3. **`timedatectl show` komandasi natijasi.**
     ```sh
     timedatectl show
     ```
-    - Skrinshot: ![timedatectl show](part_6.1.png)
+    - Skrinshot: 
+    ![timedatectl show](part_6.1.png)
 
 
 ## Part 7: 
@@ -149,19 +163,22 @@
       - Nickname yozish: emperora
       - Command rejimiga qaytish: Esc
       - Faylni saqlash va chiqish: :wq
-    - Skrinshot: ![emperora fayli](part_7.1_vim.png)
+    - Skrinshot: 
+    ![emperora fayli](part_7.1_vim.png)
 
     - NANO muharririda fayl:
       - Komanda: nano test_emperora.txt
       - Matnni yozish: emperora
       - Saqlash va chiqish: Ctrl+O, Enter, Ctrl+X
-    - Skrinshot: ![emperora fayli](part_7.4_nano.png)
+    - Skrinshot: 
+    ![emperora fayli](part_7.4_nano.png)
 
     - MCEDIT muharririda fayl:
       - Komanda: mcedit test_empeora.txt
       - Matnni yozish: emperora
       - Saqlash va chiqish: F2, F10
-    - Skrinshot: ![emperora fayli](part_7.7_mcedit.png)
+    - Skrinshot: 
+    ![emperora fayli](part_7.7_mcedit.png)
 
 3. **Har bir muharrirda faylni tahrirlash va "21 School 21" qatoriga almashtirish, keyin faylni saqlamasdan chiqish amalga oshirildi.**
     - VIM muharririda fayl:
@@ -170,20 +187,23 @@
       - Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
       - Command rejimiga qaytish: Esc
       - Saqlamasdan chiqish: :q!
-    - Skrinshot: ![emperora tahrirlangan](part_7.2_vim.png)
+    - Skrinshot: 
+    ![emperora tahrirlangan](part_7.2_vim.png)
 
     - NANO muharririda fayl:
       - Komanda: nano test_emperora.txt
       - Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
       - Saqlamasdan chiqish: Ctrl+X, N
-    - Skrinshot: ![emperora tahrirlangan](part_7.6_nano.png)
+    - Skrinshot: 
+    ![emperora tahrirlangan](part_7.6_nano.png)
 
     - MCEDIT muharririda fayl:
       - Komanda: mcedit test_emperora.txt
       - Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
       - Saqlamasdan chiqish: F10, N
       - O'zgartirilgan matn: 21 School 21
-    - Skrinshot: ![emperora tahrirlangan](part_7.8_mcedit.png)
+    - Skrinshot: 
+    ![emperora tahrirlangan](part_7.8_mcedit.png)
 
 4. **Har bir muharrirda fayl ichidagi so'zlarni qidirish va almashtirish funksiyalari o'rganildi va amalga oshirildi.**
     - VIM muharririda qidirish va almashtirish:
@@ -193,7 +213,8 @@
       - Screenshot:
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
-    - Skrinshot: ![VIM so'z almashtirish](part_7.3_vim.png)
+    - Skrinshot: 
+    ![VIM so'z almashtirish](part_7.3_vim.png)
 
     - NANO muharririda qidirish va almashtirish:
       - Komanda: nano test_emperora.txt
@@ -201,7 +222,8 @@
       - Almashtirish: Ctrl+\, emperora, enter, xamidullaxon
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
-    - Skrinshot: ![NANO so'z almashtirish](part_7.5_nano.png)
+    - Skrinshot: 
+    ![NANO so'z almashtirish](part_7.5_nano.png)
 
     - MCEDIT muharririda qidirish va almashtirish:
       - Komanda: mcedit test_emperora.txt
@@ -209,7 +231,8 @@
       - Almashtirish: F4, emperora, xamidullaxon, Enter
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
-    - Skrinshot: ![MCEDIT so'z almashtirish](part_7.9_mcedit.png)
+    - Skrinshot: 
+    ![MCEDIT so'z almashtirish](part_7.9_mcedit.png)
 
 
 ## Part 8: SSHD xizmatini o'rnatish va asosiy sozlash
@@ -246,7 +269,8 @@
       ```sh
       netstat -tan
       ```
-    - Skrinshot: ![netstat natijasi](part_8.png)
+    - Skrinshot: 
+    ![netstat natijasi](part_8.png)
 
 6. **`-tan` kalitlarining ma'nosi va chiqish ustunlarining qiymatlari tushuntirildi.**
     - `-t`: TCP protokoli.
@@ -280,57 +304,66 @@
     - Eng ko'p CPU vaqti olgan jarayon PIDi
 
     Skrinshotlar:
-    - Uptime va boshqa ma'lumotlar ko'rsatilgan: ![Top natijasi](part_9_top.png)
+    - Uptime va boshqa ma'lumotlar ko'rsatilgan: 
+    ![Top natijasi](part_9_top.png)
 
 3. **Htop komandasining natijasi quyidagi shartlarga mos keladi:**
     Skrinshotlar:
-    - PID bo'yicha saralash: ![Htop natijasi - PID](part_9_PID.png)
-    - CPU foizi bo'yicha saralash: ![Htop natijasi - CPU](part_9_CPU.png)
-    - Xotira foizi bo'yicha saralash: ![Htop natijasi - MEM](part_9_MEM.png)
-    - Vaqt bo'yicha saralash: ![Htop natijasi - TIME](part_9_TIME.png)
-    - sshd jarayoni uchun filtrlangan: ![Htop natijasi - SSHD](part_9_sshd.png)
-    - Syslog jarayoni qidirilgan: ![Htop natijasi - SYSLOG](part_9_syslog.png)
-    - Tizim nomi, soat va uptime chiqarilgan: ![Htop natijasi - HOSTNAME](part_9_hostname_time_uptime.png)
+    - PID bo'yicha saralash: 
+    ![Htop natijasi - PID](part_9_PID.png)
+    - CPU foizi bo'yicha saralash: 
+    ![Htop natijasi - CPU](part_9_CPU.png)
+    - Xotira foizi bo'yicha saralash: 
+    ![Htop natijasi - MEM](part_9_MEM.png)
+    - Vaqt bo'yicha saralash: 
+    ![Htop natijasi - TIME](part_9_TIME.png)
+    - sshd jarayoni uchun filtrlangan: 
+    ![Htop natijasi - SSHD](part_9_sshd.png)
+    - Syslog jarayoni qidirilgan: 
+    ![Htop natijasi - SYSLOG](part_9_syslog.png)
+    - Tizim nomi, soat va uptime chiqarilgan: 
+    ![Htop natijasi - HOSTNAME](part_9_hostname_time_uptime.png)
 
 
 ## Part 10: Fdisk utilitidan foydalanish
 
 1. **Fdisk utilitidan foydalanib, qattiq disk haqida ma'lumot olindi.**
-      ```sh
-      sudo fdisk -l
-      ```
+    ```sh
+    sudo fdisk -l
+    ```
     - **Hard disk:** `/dev/sda`
     - **Capacity:** `25 GB`
     - **Sectors:** `52428800`
     - **Swap size:** `25 GB` or `0`
-    - Skrinshot: ![Fdisk natijasi](part_10.png)
+    - Skrinshot: 
+    ![Fdisk natijasi](part_10.png)
 
 
 ## Part 11: df utilitidan foydalanish
 
 1. **df komandasini ishga tushirish:**
-      ```sh
-      df -h
-      ```
-    - Root bo'limi (`/`) bo'yicha ma'lumotlar:
-      - **Size:** 25G
-      - **Used:** 3.2G
-      - **Avail:** 20G
-      - **Used:** 14%
-      - **Measure:** Gigabayt (G)
-      - **Mounted:** on
+    ```sh
+    df -h
+    ```
+    **Root bo'limi (`/`) bo'yicha ma'lumotlar:**
+    - **Size:** 25G
+    - **Used:** 3.2G
+    - **Avail:** 20G
+    - **Used:** 14%
+    - **Measure:** Gigabayt (G)
+    - **Mounted:** on
 
 2. **df -Th komandasini ishga tushirish:**
-      ```sh
-      df -Th /
-      ```
-    - Root bo'limi (`/`) bo'yicha ma'lumotlar:
-      - **Size:** 25G
-      - **Used:** 3.2G
-      - **Free:** 20G
-      - **Used %:** 14%
-      - **File System Type:** ext4
-      - **Mounted** on
+    ```sh
+    df -Th /
+    ```
+    **Root bo'limi (`/`) bo'yicha ma'lumotlar:**
+    - **Size:** 25G
+    - **Used:** 3.2G
+    - **Free:** 20G
+    - **Used %:** 14%
+    - **File System Type:** ext4
+    - **Mounted** on
 
 
 ## Part 12: ## du utilitidan foydalanish
@@ -338,37 +371,61 @@
 1. **du komandasini ishga tushirish:**
 
 2. **/home, /var, /var/log papkalarining hajmi (baytlarda, inson tomonidan o'qilishi mumkin formatda):**
-      ```sh
-      du -sh /home /var /var/log
-      ```
-    - Skrinshot: ![du natijasi - asosiy papkalar](part_12.png)
+    ```sh
+    du -sh /home /var /var/log
+    ```
+    - Skrinshot: 
+    ![du natijasi - asosiy papkalar](part_12.png)
 
 3. **/var/log papkasidagi barcha tarkib hajmi (umumiy emas, har bir kirish elementining hajmi):**
-      ```sh
-      sudo du -sh /var/log/*
-      ```
-    - Skrinshot: ![du natijasi - var log](part_12.png)
+    ```sh
+    sudo du -sh /var/log/*
+    ```
+    - Skrinshot: 
+    ![du natijasi - var log](part_12.png)
 
 
 ## Part 13: ncdu utilitidan foydalanish
 
 1. **ncdu utiliti o'rnatildi va ishga tushirildi.**
-      ```sh
-      sudo apt update
-      sudo apt install ncdu
-      ```
+    ```sh
+    sudo apt update
+    sudo apt install ncdu
+    ```
 
 2. **/home, /var, /var/log papkalarining hajmi aniqlandi.**
-      ```sh
-      ncdu /home
-      ncdu /var
-      ncdu /var/log
-      ```
-    - Skrinshot: ![ncdu natijasi - home](part_13.1.png)
-![ncdu natijasi - var](part_13.2.png)
-![ncdu natijasi - var log](part_13.3.png)
+    ```sh
+    ncdu /home
+    ncdu /var
+    ncdu /var/log
+    ```
+    - Skrinshot: 
+    ![ncdu natijasi - home](part_13.1.png)
+    ![ncdu natijasi - var](part_13.2.png)
+    ![ncdu natijasi - var log](part_13.3.png)
 
 
+## Part 14: Tizim loglari bilan ishlash
+
+1. **/var/log/dmesg, /var/log/syslog va /var/log/auth.log fayllari ko'rib chiqildi.**
+    ```sh
+    sudo less /var/log/dmesg
+    sudo less /var/log/syslog
+    sudo less /var/log/auth.log
+    ```
+
+2. **Oxirgi muvaffaqiyatli login vaqti, foydalanuvchi nomi va login usuli yozildi:**
+    - **Login time:** 2024-12-25T15:02:32.310667+00:00
+    - **User name:** xamidullaxon
+    - **login method:** TTY=tty1
+
+3. **SSHD xizmati qayta ishga tushirildi.**
+    ```sh
+      sudo systemctl restart ssh
+    ```
+    - Skrinshot: 
+    ![SSHD qayta ishga tushirilishi](part_14.png)
 
 
+## Part 15: 
 
