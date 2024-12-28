@@ -2,8 +2,7 @@
 
 ## Part 1: OS o'rnatish
 
-1. **Ubuntu 20.04 Server LTS VirtualBox orqali o'rnatildi. **
-2. **Ubuntu versiyasi `cat /etc/issue` komandasi yordamida tekshirildi.**
+1. **Ubuntu versiyasi `cat /etc/issue` komandasi yordamida tekshirildi.**
     ```sh
     cat /etc/issue
     ```
@@ -16,7 +15,6 @@
     ```sh
     sudo adduser user_1
     sudo usermod -aG adm user_1
-    Foydalanuvchi `adm` guruhiga qo'shildi.
     ```
     - Skrinshot: ![adm ga qo'shildi](part_2.1.png)
 
@@ -107,4 +105,25 @@
     - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
 
 
-## Part 6: 
+## Part 6: Vaqt xizmatini o'rnatish va sozlash
+
+1. **Avtomatik vaqt sinxronizatsiyasi xizmati o'rnatildi va sozlandi.**
+    ```sh
+    - sudo apt update
+    - sudo apt istall systemd-timesynd -y
+
+    - sudo systemctl enable systemd-timesyncd
+    - sudo systemctl start systemd-timesyncd
+    
+    - sudo systemctl status systemd-timesyncd
+    ```
+
+2. **Hozirgi joylashuvingiz bo'yicha vaqt zonasi vaqti chiqarildi.**
+    ```sh
+    - sudo timedatectl set-timezone Asia/Tashkent
+    - timedatectl
+    ```
+    - Skrinshot: ![Vaqt zonasi vaqti](part_6.png)
+
+3. **`timedatectl show` komandasi natijasi.**
+    - Skrinshot: ![timedatectl](part_6.1.png)
