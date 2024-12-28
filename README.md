@@ -194,7 +194,7 @@
 
 4. **Har bir muharrirda fayl ichidagi so'zlarni qidirish va almashtirish funksiyalari o'rganildi va amalga oshirildi.**
     - VIM muharririda qidirish va almashtirish:
-    1.Komanda: vim test_emperora.txt
+      - Komanda: vim test_emperora.txt
     2.Qidirish rejimi: /emperora
     3.Almashtirish: :%s/emperora/xamidullaxon/g
     4.Screenshot:
