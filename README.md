@@ -296,7 +296,6 @@
 ## Part 10: Fdisk utilitidan foydalanish
 
 1. **Fdisk utilitidan foydalanib, qattiq disk haqida ma'lumot olindi.**
-    - Komanda:
       ```sh
       sudo fdisk -l
       ```
@@ -307,6 +306,67 @@
     - Skrinshot: ![Fdisk natijasi](part_10.png)
 
 
+## Part 11: df utilitidan foydalanish
+
+1. **df komandasini ishga tushirish:**
+      ```sh
+      df -h
+      ```
+    - Root bo'limi (`/`) bo'yicha ma'lumotlar:
+      - **Size:** 25G
+      - **Used:** 3.2G
+      - **Avail:** 20G
+      - **Used:** 14%
+      - **Measure:** Gigabayt (G)
+      - **Mounted:** on
+
+2. **df -Th komandasini ishga tushirish:**
+      ```sh
+      df -Th /
+      ```
+    - Root bo'limi (`/`) bo'yicha ma'lumotlar:
+      - **Size:** 25G
+      - **Used:** 3.2G
+      - **Free:** 20G
+      - **Used %:** 14%
+      - **File System Type:** ext4
+      - **Mounted** on
+
+
+## Part 12: ## du utilitidan foydalanish
+
+1. **du komandasini ishga tushirish:**
+
+2. **/home, /var, /var/log papkalarining hajmi (baytlarda, inson tomonidan o'qilishi mumkin formatda):**
+      ```sh
+      du -sh /home /var /var/log
+      ```
+    - Skrinshot: ![du natijasi - asosiy papkalar](part_12.png)
+
+3. **/var/log papkasidagi barcha tarkib hajmi (umumiy emas, har bir kirish elementining hajmi):**
+      ```sh
+      sudo du -sh /var/log/*
+      ```
+    - Skrinshot: ![du natijasi - var log](part_12.png)
+
+
+## Part 13: ncdu utilitidan foydalanish
+
+1. **ncdu utiliti o'rnatildi va ishga tushirildi.**
+      ```sh
+      sudo apt update
+      sudo apt install ncdu
+      ```
+
+2. **/home, /var, /var/log papkalarining hajmi aniqlandi.**
+      ```sh
+      ncdu /home
+      ncdu /var
+      ncdu /var/log
+      ```
+    - Skrinshot: ![ncdu natijasi - home](part_13.1.png)
+![ncdu natijasi - var](part_13.2.png)
+![ncdu natijasi - var log](part_13.3.png)
 
 
 
