@@ -155,7 +155,7 @@
       - Komanda: nano test_emperora.txt
       - Matnni yozish: emperora
       - Saqlash va chiqish: Ctrl+O, Enter, Ctrl+X
-    - Skrinshot: ![emperora fayli](part_7.2_nano.txt)
+    - Skrinshot: ![emperora fayli](part_7.4_nano.png)
 
     - MCEDIT muharririda fayl:
       - Komanda: mcedit test_empeora.txt
@@ -183,7 +183,7 @@
       - Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
       - Saqlamasdan chiqish: F10, N
       - O'zgartirilgan matn: 21 School 21
-    - Skrinshot: ![emperora tahrirlangan](screenshots/test_mcedit_after_edit.jpg)
+    - Skrinshot: ![emperora tahrirlangan](part_7.8_mcedit.png)
 
 4. **Har bir muharrirda fayl ichidagi so'zlarni qidirish va almashtirish funksiyalari o'rganildi va amalga oshirildi.**
     - VIM muharririda qidirish va almashtirish:
@@ -201,7 +201,7 @@
       - Almashtirish: Ctrl+\, emperora, enter, xamidullaxon
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
-    - Skrinshot: ![NANO so'z almashtirish](part_7.7_mcedit.png)====
+    - Skrinshot: ![NANO so'z almashtirish](part_7.5_nano.png)
 
     - MCEDIT muharririda qidirish va almashtirish:
       - Komanda: mcedit test_emperora.txt
@@ -209,7 +209,7 @@
       - Almashtirish: F4, emperora, xamidullaxon, Enter
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
-    - Skrinshot: ![MCEDIT so'z almashtirish](screenshots/mcedit_replace.jpg)
+    - Skrinshot: ![MCEDIT so'z almashtirish](part_7.9_mcedit.png)
 
 
 
