@@ -97,11 +97,11 @@
 ## Part 5: Sudo komandasi ishlatilishi
 
 1. **Part 2 da yaratilgan foydalanuvchi orqali OS hostname o'zgartirildi.**
-      ```sh
-      sudo usermod -aG sudo user_1
-      sudo hostnamectl set-hostname xamid
-      hostnamectl
-      ```
+    ```sh
+    sudo usermod -aG sudo user_1
+    sudo hostnamectl set-hostname xamid
+    hostnamectl
+    ```
     - Skrinshot: ![Hostname o'zgartirilgan](part_5.png)
 
 
@@ -109,21 +109,113 @@
 
 1. **Avtomatik vaqt sinxronizatsiyasi xizmati o'rnatildi va sozlandi.**
     ```sh
-    - sudo apt update
-    - sudo apt istall systemd-timesynd -y
+    sudo apt update
+    sudo apt istall systemd-timesynd -y
 
-    - sudo systemctl enable systemd-timesyncd
-    - sudo systemctl start systemd-timesyncd
-    
-    - sudo systemctl status systemd-timesyncd
+    sudo systemctl enable systemd-timesyncd
+    sudo systemctl start systemd-timesyncd
+
+    sudo systemctl status systemd-timesyncd
     ```
 
 2. **Hozirgi joylashuvingiz bo'yicha vaqt zonasi vaqti chiqarildi.**
     ```sh
-    - sudo timedatectl set-timezone Asia/Tashkent
-    - timedatectl
+    sudo timedatectl set-timezone Asia/Tashkent
+    timedatectl
     ```
     - Skrinshot: ![Vaqt zonasi vaqti](part_6.png)
 
 3. **`timedatectl show` komandasi natijasi.**
-    - Skrinshot: ![timedatectl](part_6.1.png)
+    ```sh
+    timedatectl show
+    ```
+    - Skrinshot: ![timedatectl show](part_6.1.png)
+
+
+## Part 7: 
+
+## Matn muharrirlarini o'rnatish va ishlatish
+
+1. **VIM, NANO, va MCEDIT matn muharrirlari o'rnatildi.**
+    ```sh
+    sudo apt update
+    sudo apt install vim nano joe -y
+    ```
+
+2. **Har bir muharrirda test_X.txt fayli yaratildi va nik kiritildi, keyin fayl saqlandi.**
+    - VIM muharririda fayl:
+    ```sh
+    vim test_emperora.txt
+    ```
+    1.Komanda: vim test_emperora.txt
+    2.Insert rejimiga o'tish: i
+    3.Nickname yozish: emperora
+    4.Command rejimiga qaytish: Esc
+    5.Faylni saqlash va chiqish: :wq
+    - Skrinshot: ![emperora fayli](part_7.1_vim.png)
+
+    - NANO muharririda fayl:
+    ```sh
+    nano test_emperora.txt
+    ```
+    save: CRTL + o
+    exit: CTRL + x
+    - Skrinshot: ![emperora fayli](part_7.2_nano.txt)
+
+    - MCEDIT muharririda fayl:
+    ```sh
+    joe test_emperora.txt
+    ```
+    save: CRTL + k
+    exit: CTRL + x
+    - Skrinshot: ![emperora fayli]()
+
+3. **Har bir muharrirda faylni tahrirlash va "21 School 21" qatoriga almashtirish, keyin faylni saqlamasdan chiqish amalga oshirildi.**
+    - VIM muharririda fayl:
+    ```sh
+    vim test_emperora.txt
+    ```
+    1.Komanda: vim test_emperora.txt
+    2.Insert rejimiga o'tish: i
+    3.Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
+    4.Command rejimiga qaytish: Esc
+    5.Saqlamasdan chiqish: :q!
+    - Skrinshot: ![emperora fayli](part_7.2_vim.png)
+
+    - NANO muharririda fayl:
+    - Skrinshot: Tahrirlangan fayl ko'rsatilgan.
+
+![emperora tahrirlangan](screenshots/test_nano_after_edit.jpg)
+
+    - MCEDIT muharririda fayl:
+    - Skrinshot: Tahrirlangan fayl ko'rsatilgan.
+
+![emperora tahrirlangan](screenshots/test_mcedit_after_edit.jpg)
+
+4. **Har bir muharrirda fayl ichidagi so'zlarni qidirish va almashtirish funksiyalari o'rganildi va amalga oshirildi.**
+    - VIM muharririda qidirish va almashtirish:
+    1.Komanda: vim test_emperora.txt
+    2.Qidirish rejimi: /emperora
+    3.Almashtirish: :%s/emperora/xamidullaxon/g
+    4.Screenshot:
+    5.Qidirilgan so'z: emperora
+    6.Almashtirilgan so'z: xamidullaxon
+    - Skrinshot: ![VIM so'z almashtirish](part_7.3_vim.png)
+
+    - NANO muharririda qidirish va almashtirish:
+    - Skrinshot: Qidirish natijasi va so'z almashtirish komandasi ko'rsatilgan.
+
+![NANO muharriri qidirish](screenshots/nano_search.jpg)
+![NANO muharriri so'z almashtirish](screenshots/nano_replace.jpg)
+
+    - MCEDIT muharririda qidirish va almashtirish:
+      - Skrinshot: Qidirish natijasi va so'z almashtirish komandasi ko'rsatilgan.
+
+![MCEDIT muharriri qidirish](screenshots/mcedit_search.jpg)
+![MCEDIT muharriri so'z almashtirish](screenshots/mcedit_replace.jpg)
+
+
+
+
+
+
