@@ -170,7 +170,7 @@
       - Matnni o'zgartirish: emperora dan 21 School 21 ga o'zgartirish.
       - Command rejimiga qaytish: Esc
       - Saqlamasdan chiqish: :q!
-    - Skrinshot: ![emperora fayli](part_7.2_vim.png)
+    - Skrinshot: ![emperora tahrirlangan](part_7.2_vim.png)
 
     - NANO muharririda fayl:
       - Komanda: nano test_emperora.txt
@@ -210,6 +210,105 @@
       - Qidirilgan so'z: emperora
       - Almashtirilgan so'z: xamidullaxon
     - Skrinshot: ![MCEDIT so'z almashtirish](part_7.9_mcedit.png)
+
+
+## Part 8: SSHD xizmatini o'rnatish va asosiy sozlash
+
+1. **SSHD xizmati o'rnatildi va tizim yuklanishida avtomatik ishga tushirilishi qo'shildi.**
+    - SSHD xizmati o'rnatilishi:
+      ```sh
+      sudo apt update
+      sudo apt install openssh-server
+      sudo systemctl enable ssh
+      ```
+
+2. **SSHD xizmatining porti 2022 ga o'zgartirildi.**
+    - Buning uchun `/etc/ssh/sshd_config` fayli tahrir qilindi va `Port 2022` qatori qo'shildi:
+      ```sh
+      sudo nano /etc/ssh/sshd_config
+      ```
+    - O'zgartirishlar saqlandi va SSHD xizmati qayta ishga tushirildi:
+      ```sh
+      sudo systemctl restart ssh
+      ```
+
+3. **PS komandasidan foydalangan holda SSHD jarayonining mavjudligi ko'rsatildi.**
+      ```sh
+      ps aux | grep sshd
+      ```
+
+4. **PS komandasining va har bir kalitning ma'nosi tushuntirildi.**
+    - `ps`: Jarayonlarni ko'rsatish.
+    - `aux`: Har qanday foydalanuvchi (a), uy vazifalari (u), kengaytirilgan formatda (x).
+
+5. **`netstat -tan` komandasi natijasi quyidagi satrni o'z ichiga olishi kerak:**
+    - `tcp 0 0.0.0.0:2022 0.0.0.0:* LISTEN`
+      ```sh
+      netstat -tan
+      ```
+    - Skrinshot: ![netstat natijasi](part_8.png)
+
+6. **`-tan` kalitlarining ma'nosi va chiqish ustunlarining qiymatlari tushuntirildi.**
+    - `-t`: TCP protokoli.
+    - `-a`: Barcha portlar.
+    - `-n`: Port nomlari o'rniga raqamlarni ko'rsatish.
+    - Ustunlar:
+      - `tcp`: Protokol turi.
+      - `0 0.0.0.0:2022`: Mahalliy manzil va port.
+      - `0.0.0.0:*`: Uzoq manzil va port.
+      - `LISTEN`: Holat.
+      - `0.0.0.0`: Har qanday IP manzildan ulanishni qabul qilish.
+
+
+## Part 9: Top va htop utilitilarini o'rnatish va ishlatish
+
+1. **Top va htop utilitilari o'rnatildi va ishga tushirildi.**
+    ```sh
+    sudo apt update
+    sudo apt install procps -y
+    sudo apt install htop -y
+    ```
+
+2. **Top komandasining natijasidan quyidagilar aniqlandi:**
+    - Uptime (tizim ish vaqti)
+    - Foydalanuvchilar soni
+    - O'rtacha tizim yuklanishi
+    - Umumiy jarayonlar soni
+    - CPU yuklanishi
+    - Xotira yuklanishi
+    - Eng ko'p xotira foydalanayotgan jarayon PIDi
+    - Eng ko'p CPU vaqti olgan jarayon PIDi
+
+    Skrinshotlar:
+    - Uptime va boshqa ma'lumotlar ko'rsatilgan: ![Top natijasi](part_9_top.png)
+
+3. **Htop komandasining natijasi quyidagi shartlarga mos keladi:**
+    Skrinshotlar:
+    - PID bo'yicha saralash: ![Htop natijasi - PID](part_9_PID.png)
+    - CPU foizi bo'yicha saralash: ![Htop natijasi - CPU](part_9_CPU.png)
+    - Xotira foizi bo'yicha saralash: ![Htop natijasi - MEM](part_9_MEM.png)
+    - Vaqt bo'yicha saralash: ![Htop natijasi - TIME](part_9_TIME.png)
+    - sshd jarayoni uchun filtrlangan: ![Htop natijasi - SSHD](part_9_sshd.png)
+    - Syslog jarayoni qidirilgan: ![Htop natijasi - SYSLOG](part_9_syslog.png)
+    - Tizim nomi, soat va uptime chiqarilgan: ![Htop natijasi - HOSTNAME](part_9_hostname_time_uptime.png)
+
+
+## Part 10: Fdisk utilitidan foydalanish
+
+1. **Fdisk utilitidan foydalanib, qattiq disk haqida ma'lumot olindi.**
+    - Komanda:
+      ```sh
+      sudo fdisk -l
+      ```
+    - **Hard disk:** `/dev/sda`
+    - **Capacity:** `25 GB`
+    - **Sectors:** `52428800`
+    - **Swap size:** `25 GB` or `0`
+    - Skrinshot: ![Fdisk natijasi](part_10.png)
+
+
+
+
 
 
 
