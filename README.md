@@ -115,6 +115,10 @@
     - screenshot ![ws2](photos/ws2.png)
     ```sh
     sudo nano /etc/netplan/00-installer-config.yaml
+    ```
+    - screenshots ![ws2.1](photos/ws3.1.png)
+    - screenshots ![ws2.2](photos/ws3.2.png)
+    ```sh
     sudo netplan apply
     ```
     - screenshots ![ws2.1](photos/ws2.1.png)
@@ -123,7 +127,10 @@
     ping 172.24.116.8
     ping 192.168.100.10
     ```
+    - ***All works***
 
 
     
+
+
 
