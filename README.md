@@ -16,10 +16,10 @@
 2) **conversion of the mask `255.255.255.0`**
     - **Binary:** `11111111.11111111.11111111.00000000`
     - **Prefix:** `/24` (bu 24 ta 1 bitdan iborat binar shakl)
-    **/15 to normal and binary**
+    - **/15 to normal and binary**
     - **Normal** `255.254.0.0` 
     - **Binary** `11111111.11111110.00000000.00000000`
-    **`11111111.11111111.11111111.11110000` to normal and prefix**
+    - **`11111111.11111111.11111111.11110000` to normal and prefix**
     - **Normal:** `255.255.255.240`
     - **Prefiks:** `/28` (bu 28 ta 1 bitdan iborat binar shakl)
 
