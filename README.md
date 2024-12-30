@@ -1,5 +1,6 @@
 ## Part 1: `ipcalc` tool
 
+# 1.1 Networking and Masks
 1) **network address of `192.176.38.54/13`**
     ```sh
     ipcal 192.167.38.54/13
@@ -13,7 +14,8 @@
     - **Broadcast:**      `192.167.255.255`            11000000.10100 111.11111111.11111111
     - **Hosts/Net:**      `524286`                     Class C
 
-2)  **conversion of the mask `255.255.255.0`**
+2)  
+    - **conversion of the mask `255.255.255.0`**
         - **Binary:** `11111111.11111111.11111111.00000000`
         - **Prefix:** `/24` (bu 24 ta 1 bitdan iborat binar shakl)
     - **`/15` to normal and binary**
