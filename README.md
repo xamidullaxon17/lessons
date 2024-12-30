@@ -21,8 +21,8 @@
     - **Normal** `255.254.0.0` 
     - **Binary** `11111111.11111110.00000000.00000000`
 4. **`11111111.11111111.11111111.11110000` to normal and prefix**
-        - **Normal:** `255.255.255.240`
-        - **Prefiks:** `/28` (bu 28 ta 1 bitdan iborat binar shakl)
+   - **Normal:** `255.255.255.240`
+    - **Prefiks:** `/28` (bu 28 ta 1 bitdan iborat binar shakl)
 
 3. **minimum and maximum host in 12.167.38.4**
 
