@@ -2,6 +2,7 @@
 
 ### 1.1 Networking and Masks
 1. **network address of `192.176.38.54/13`**
+2. ****
     ```sh
     ipcal 192.167.38.54/13
     ```
@@ -14,17 +15,17 @@
     - **Broadcast:**      `192.167.255.255`        11000000.10100 111.11111111.11111111
     - **Hosts/Net:**      `524286`                 Class C
 
-2. **conversion of the mask `255.255.255.0`**
+3. **conversion of the mask `255.255.255.0`**
     - **Binary:** `11111111.11111111.11111111.00000000`
     - **Prefix:** `/24` (bu 24 ta 1 bitdan iborat binar shakl)
-3. **`/15` to normal and binary**
+4. **`/15` to normal and binary**
     - **Normal** `255.254.0.0` 
     - **Binary** `11111111.11111110.00000000.00000000`
-4. **`11111111.11111111.11111111.11110000` to normal and prefix**
+5. **`11111111.11111111.11111111.11110000` to normal and prefix**
     - **Normal:** `255.255.255.240`
     - **Prefiks:** `/28` (bu 28 ta 1 bitdan iborat binar shakl)
 
-5. **minimum and maximum host in 12.167.38.4**
+6. **minimum and maximum host in 12.167.38.4**
     ```sh
     ipcalc 12.167.38.4/8
     ```
@@ -37,7 +38,7 @@
     - **Broadcast:** `12.255.255.255` 00001100. 11111111.11111111.11111111
     - **Hosts/Net:** `16777214` Class A
 
-6. **`11111111.11111111.00000000.00000000 (/16)`**
+7. **`11111111.11111111.00000000.00000000 (/16)`**
     ```sh
     ipcalc 12.167.38.4/16
     ```
@@ -50,7 +51,7 @@
     - **Broadcast:** `12.167.255.255` 00001100.10100111. 11111111.11111111
     - **Hosts/Net:** `65534` Class A
 
-7. **`255.255.254.0 (/23)`**
+8. **`255.255.254.0 (/23)`**
     ```sh
     ipcalc 12.167.38.4/23
     ```
@@ -63,7 +64,7 @@
     - **Broadcast:** `12.167.39.255` 00001100.10100111.0010011 1.11111111
     - **Hosts/Net:** `510` Class A
 
-8. **minimum and maximum host in 12.167.38.4**
+9. **minimum and maximum host in 12.167.38.4**
     ```sh
     ipcalc 12.167.38.4/4
     ```
