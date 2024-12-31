@@ -128,48 +128,59 @@
     - screenshots ![ws3.2](photos/ws2.2.png)
     
 ### 2.1 Adding a static route manually
+1. **`ip r add` command**
+    ```sh
+    sudo ip r add 172.16.0.0/12 via 192.168.100.1 dev enp0s8
+    ping 172.24.116.8
+    ```
+    - screenshots ![ws](photos/ws1.5.png)
+    ```sh
+    sudo ip r add 192.168.0.0/16 via 172.24.116.1 dev enp0s9
+    ping 192.168.100.10
+    ```
+    - screenshots ![ws](photos/ws2.5.png)    
+
+
+### 2.2 Adding a static route with saving
 1. **Statik marshrut qo'shish**
     - from ws1 to ws2:
     ```sh
     sudo ip route add 172.24.116.0/24 dev enp0s9
     ```
+    - screenshots ![yaml](photos/ws3.1.png)
     ```sh
     ping 172.24.116.8
     ```
-    - screenshot ![ping_ws1](  ) 
-    ****
+    - screenshot ![ping_ws1](photos/ws4.1.png) 
+    
     - from ws2 to ws1:
     ```sh
     sudo ip route add 192.168.100.0/24 dev enp0s8
     ```
+    - screenshots ![yaml](photos/ws3.2.png)
     ```sh
     ping 192.168.100.10
     ```    
-    - screenshot ![ping_ws2](  )
+    - screenshot ![ping_ws2](photos/ws4.2.png)
     
 
+## Part 3: iperf3 utility
+### **3.1 Connection speed**
 
+1. **8 Mbps to MB/s (Megabits per second to Megabytes per second)**
+    - ***1 byte = 8 bits***
+    - 8 Mbps ÷ 8 = 1 MB/s
+    - `Answer`: 8 Mbps = 1 MB/s
 
+2. **100 MB/s to Kbps (Megabytes per second to Kilobits per second)**
+    - ***1 byte = 8 bits and 1 MB = 1024 * 1024 bytes***
+    - 100MB/s * 8 * 1024 = 819,200 Kbps
+    - `Answer:` 100 MB/s = 819,200 Kbps
 
+3. **1 Gbps to Mbps (Gigabits per second to Megabits per second)**
+    - ***1 Gbps = 1000 Mbps***
+    - 1 Gbps = 1000 Mbps
+    - ~Answer~: 1 Gbps = 1000 Mbps
 
+### **3.2 iperf3 utility**
 
-
-xamidullaxon@xamidullaxon:~$ sudo netplan apply
-** (generate: 1674): WARNING **: 20:40:33.216: `gateway4 has been deprecated, use default routes instead.
-See the 'Default routes' section of the documentation for more details.
-** (generate: 1674): WARNING **: 20:40:33.219: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `rout ing-policy instead. Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3
-** (process:1673): WARNING **: 20:40:33.969: `gateway4 has been deprecated, use default routes instead.
-See the 'Default routes' section of the documentation for more details.
-** (process: 1673): WARNING **: 20:40:33.969: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `routi ng-policy instead. Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3
-** (process:1673): WARNING **: 20:40:34.128: `gateway4 has been deprecated, use default routes instead.
-See the 'Default routes' section of the documentation for more details.
-** (process: 1673): WARNING **: 20:40:34.130: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `routi ng-policy instead.
-Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3 xamidullaxon@xamidullaxon:"$
-
-
-
-
-xamidullaxon@ws2:~$ sudo netplan apply
-** (generate: 1528): WARNING **: 15:40:44.318: gateway4 has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details.
-** (process: 1527): WARNING **: 15:40:45.005: gateway4` has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details.
-** (process: 1527): WARNING **: 15:40:45.175: gateway4` has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details. xamidullaxon@ws2:"$
