@@ -2,7 +2,6 @@
 
 ### 1.1 Networking and Masks
 1. **network address of `192.176.38.54/13`**
-******
     ```sh
     ipcal 192.167.38.54/13
     ```
