@@ -14,17 +14,17 @@
     - **Broadcast:**      `192.167.255.255`        11000000.10100 111.11111111.11111111
     - **Hosts/Net:**      `524286`                 Class C
 
-3. **conversion of the mask `255.255.255.0`**
+2. **conversion of the mask `255.255.255.0`**
     - **Binary:** `11111111.11111111.11111111.00000000`
     - **Prefix:** `/24` (bu 24 ta 1 bitdan iborat binar shakl)
-4. **`/15` to normal and binary**
+3. **`/15` to normal and binary**
     - **Normal** `255.254.0.0` 
     - **Binary** `11111111.11111110.00000000.00000000`
-5. **`11111111.11111111.11111111.11110000` to normal and prefix**
+4. **`11111111.11111111.11111111.11110000` to normal and prefix**
     - **Normal:** `255.255.255.240`
     - **Prefiks:** `/28` (bu 28 ta 1 bitdan iborat binar shakl)
 
-6. **minimum and maximum host in 12.167.38.4**
+5. **minimum and maximum host in 12.167.38.4**
     ```sh
     ipcalc 12.167.38.4/8
     ```
@@ -37,7 +37,7 @@
     - **Broadcast:** `12.255.255.255` 00001100. 11111111.11111111.11111111
     - **Hosts/Net:** `16777214` Class A
 
-7. **`11111111.11111111.00000000.00000000 (/16)`**
+6. **`11111111.11111111.00000000.00000000 (/16)`**
     ```sh
     ipcalc 12.167.38.4/16
     ```
@@ -50,7 +50,7 @@
     - **Broadcast:** `12.167.255.255` 00001100.10100111. 11111111.11111111
     - **Hosts/Net:** `65534` Class A
 
-8. **`255.255.254.0 (/23)`**
+7. **`255.255.254.0 (/23)`**
     ```sh
     ipcalc 12.167.38.4/23
     ```
@@ -63,7 +63,7 @@
     - **Broadcast:** `12.167.39.255` 00001100.10100111.0010011 1.11111111
     - **Hosts/Net:** `510` Class A
 
-9. **minimum and maximum host in 12.167.38.4**
+8. **minimum and maximum host in 12.167.38.4**
     ```sh
     ipcalc 12.167.38.4/4
     ```
@@ -111,26 +111,65 @@
     ```sh
     ip a
     ```
-    - screenshot ![ws1](photos/ws1.png)
-    - screenshot ![ws2](photos/ws2.png)
+    - screenshot ![ws1](photos/ws1_new.png)
+    - screenshot ![ws2](photos/ws2_new.png)
+
+2.  **Added `192.168.100.10/16` and `172.24.116.8/12`**
     ```sh
     sudo nano /etc/netplan/00-installer-config.yaml
     ```
     - screenshots ![ws2.1](photos/ws3.1.png)
     - screenshots ![ws2.2](photos/ws3.2.png)
+3.  **`netplan apply` restarted the network service**
     ```sh
     sudo netplan apply
     ```
-    - screenshots ![ws2.1](photos/ws2.1.png)
-    - screenshots ![ws2.2](photos/ws2.2.png)
+    - screenshots ![ws3.1](photos/ws2.1.png)
+    - screenshots ![ws3.2](photos/ws2.2.png)
+    
+### 2.1 Adding a static route manually
+1. **Statik marshrut qo'shish**
+    - from ws1 to ws2:
+    ```sh
+    sudo ip route add 172.24.116.0/24 dev enp0s9
+    ```
     ```sh
     ping 172.24.116.8
-    ping 192.168.100.10
     ```
-    - ***All works***
-
-
+    - screenshot ![ping_ws1](  ) 
+    ****
+    - from ws2 to ws1:
+    ```sh
+    sudo ip route add 192.168.100.0/24 dev enp0s8
+    ```
+    ```sh
+    ping 192.168.100.10
+    ```    
+    - screenshot ![ping_ws2](  )
     
 
 
 
+
+
+
+
+xamidullaxon@xamidullaxon:~$ sudo netplan apply
+** (generate: 1674): WARNING **: 20:40:33.216: `gateway4 has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+** (generate: 1674): WARNING **: 20:40:33.219: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `rout ing-policy instead. Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3
+** (process:1673): WARNING **: 20:40:33.969: `gateway4 has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+** (process: 1673): WARNING **: 20:40:33.969: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `routi ng-policy instead. Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3
+** (process:1673): WARNING **: 20:40:34.128: `gateway4 has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+** (process: 1673): WARNING **: 20:40:34.130: Problem encountered while validating default route consistency. Please set up multiple routing tables and use `routi ng-policy instead.
+Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in enpos3 but also in enpos3 xamidullaxon@xamidullaxon:"$
+
+
+
+
+xamidullaxon@ws2:~$ sudo netplan apply
+** (generate: 1528): WARNING **: 15:40:44.318: gateway4 has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details.
+** (process: 1527): WARNING **: 15:40:45.005: gateway4` has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details.
+** (process: 1527): WARNING **: 15:40:45.175: gateway4` has been deprecated, use default routes instead. See the 'Default routes' section of the documentation for more details. xamidullaxon@ws2:"$
