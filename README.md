@@ -167,20 +167,47 @@
 ## Part 3: iperf3 utility
 ### **3.1 Connection speed**
 
-1. **8 Mbps to MB/s (Megabits per second to Megabytes per second)**
+1. **8 Mbps to MB/s (Megabits per second to Megabytes per second):**
     - ***1 byte = 8 bits***
     - 8 Mbps ÷ 8 = 1 MB/s
     - `Answer`: 8 Mbps = 1 MB/s
 
-2. **100 MB/s to Kbps (Megabytes per second to Kilobits per second)**
+2. **100 MB/s to Kbps (Megabytes per second to Kilobits per second):**
     - ***1 byte = 8 bits and 1 MB = 1024 * 1024 bytes***
-    - 100MB/s * 8 * 1024 = 819,200 Kbps
+    - 100 MB/s * 8 * 1024 = 819,200 Kbps
     - `Answer:` 100 MB/s = 819,200 Kbps
 
-3. **1 Gbps to Mbps (Gigabits per second to Megabits per second)**
+3. **1 Gbps to Mbps (Gigabits per second to Megabits per second):**
     - ***1 Gbps = 1000 Mbps***
-    - 1 Gbps = 1000 Mbps
-    - ~Answer~: 1 Gbps = 1000 Mbps
+    - `Answer:` 1 Gbps = 1000 Mbps
 
 ### **3.2 iperf3 utility**
+    ```sh
+    sudo apt update
+    sudo apt install iperf3
+    ```
+1. **`ws1` da server ishga tushirish**
+    ```sh
+    iperf -s
+    ```
+    - `ws2` clientni ishga tushirish
+    ```sh
+    iperf3 -c 192.168.100.10
+    ```
+    - screenshot: ![ws2_iperf3](photos/ws2_i.png)
+
+2. **`ws2` da server ishga tushirish**
+    ```sh
+    iperf -s
+    ```
+    - `ws1` clientni ishga tushirish
+    ```sh
+    iperf3 -c 172.24.116.8
+    ```
+    - screenshot: ![ws1_iperf3](photos/ws1_i.png)
+    
+
+
+
+
 
